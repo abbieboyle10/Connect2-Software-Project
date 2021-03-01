@@ -1,0 +1,70 @@
+{% extends 'employer/core.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="{{employee.avatar.url}}" alt="Admin" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                            <h4>{{employer.company_name}}</h4>
+                            <p class="text-secondary mb-1">{{employer.location}}</p>
+                            <p class="text-muted font-size-sm">{{employer.phone}}</p>
+                            <p class="text-muted font-size-sm">{{employer.email}}</p>
+                            <p class="text-muted font-size-sm">{{employee.phone_number}}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <table class="table table-sm">
+                        <tr>
+                            <h3>About</h3>
+                            <th></th>
+
+
+                        </tr>
+
+
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <a class="nav-link" href="{% url 'createjob'  %}">Add a Job</a>
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Title</th>
+                            <th>Company</th>
+                            <th>Date Posted</th>
+                        </tr>
+
+                        {% for job in jobs %}
+                        <tr>
+
+                            <td>{{job.title}}</td>
+                            <td>{{job.employer}}</td>
+                            <td>{{job.date_created}}</td>
+
+                            {% endfor %}
+                        </tr>
+
+
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
+{% endblock %}

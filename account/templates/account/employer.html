@@ -1,0 +1,116 @@
+{% extends 'account/core.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="main-body">
+
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="{{employee.avatar.url}}" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>{{employer.company_name}}</h4>
+                                <p class="text-secondary mb-1">{{employer.location}}</p>
+                                <p class="text-muted font-size-sm">{{employee.city}},{{employee.county}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{employee.first_name}} {{employee.last_name}}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{employee.email}}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Phone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{employee.phone_number}}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row gutters-sm">
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2"></i>Skills</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        hi
+                                    </div>
+                                    <div class="col-md-8">
+                                        Junior
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2"></i>Experience</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        hi
+                                    </div>
+                                    <div class="col-md-8">
+                                        Junior
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            test
+                        </div>
+                        <div class="col-md-4">
+                            test
+                        </div>
+                        <div class="col-md-4">
+                            test
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
